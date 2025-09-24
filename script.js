@@ -2,12 +2,10 @@
 const cardA = document.getElementById('card-a');
 const imgA = document.getElementById('img-a');
 const nameA = document.getElementById('name-a');
-const descA = document.getElementById('desc-a');
 
 const cardB = document.getElementById('card-b');
 const imgB = document.getElementById('img-b');
 const nameB = document.getElementById('name-b');
-const descB = document.getElementById('desc-b');
 
 const selectionContainer = document.getElementById('selection-container');
 const winnerContainer = document.getElementById('winner-container');
@@ -35,13 +33,11 @@ function setupNextRound() {
     imgA.src = currentA.image;
     imgA.alt = `A photo of ${currentA.name}`;
     nameA.textContent = currentA.name;
-    descA.textContent = currentA.description;
 
     // Update Card B with the new data
     imgB.src = currentB.image;
     imgB.alt = `A photo of ${currentB.name}`;
     nameB.textContent = currentB.name;
-    descB.textContent = currentB.description;
 }
 
 function select(winner) {
@@ -58,7 +54,6 @@ function displayWinner(winner) {
     // Update the winner card with the final restaurant's details
     document.getElementById('winner-img').src = winner.image;
     document.getElementById('winner-name').textContent = winner.name;
-    document.getElementById('winner-desc').textContent = winner.description;
 
     // Show the winner container
     winnerContainer.classList.remove('hidden');
