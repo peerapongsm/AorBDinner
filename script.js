@@ -1,9 +1,7 @@
 // --- 1. GET REFERENCES TO HTML ELEMENTS ---
-const cardA = document.getElementById('card-a');
 const imgA = document.getElementById('img-a');
 const nameA = document.getElementById('name-a');
 
-const cardB = document.getElementById('card-b');
 const imgB = document.getElementById('img-b');
 const nameB = document.getElementById('name-b');
 
@@ -30,7 +28,7 @@ function selectNext(winningCardId) {
     }
 
     // Get the next challenger from the front of the array.
-    const nextChallenger = remainingContenders.shift();
+    const nextChallenger = remainingContenders.pop();
 
     // Update the losing card with the new challenger's data.
     if (winningCardId === 'A') {
@@ -106,16 +104,6 @@ async function startShowdown() {
     }
 }
 
-// --- 5. ADD EVENT LISTENERS ---
-// MODIFIED: The event listeners now call the new function, passing which card won.
-cardA.addEventListener('click', () => {
-    selectNext('A'); // Card A is the winner
-});
-
-cardB.addEventListener('click', () => {
-    selectNext('B'); // Card B is the winner
-});
-
-// --- 6. KICK OFF THE PROCESS ---
+// --- 5. KICK OFF THE PROCESS ---
 // Call the async function to begin the entire process
 startShowdown();
