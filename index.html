@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Showdown</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>Restaurant Showdown</h1>
+        <p>Click on your favorite of the two to advance it to the next round!</p>
+    </header>
+
+    <div class="container" id="selection-container">
+        <div class="restaurant-card" id="card-a">
+            <img src="" alt="A photo of a restaurant" id="img-a">
+            <div class="card-content">
+                <h2 id="name-a"></h2>
+                <p id="desc-a"></p>
+            </div>
+        </div>
+
+        <div class="restaurant-card" id="card-b">
+            <img src="" alt="A photo of a restaurant" id="img-b">
+            <div class="card-content">
+                <h2 id="name-b"></h2>
+                <p id="desc-b"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="winner-container">
+        <div class="winner-box">
+            <h2>🏆 The Winner Is... 🏆</h2>
+            <div class="restaurant-card" id="winner-card">
+                 <img src="" alt="The winning restaurant" id="winner-img">
+                 <div class="card-content">
+                    <h2 id="winner-name"></h2>
+                    <p id="winner-desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
